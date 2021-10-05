@@ -1,0 +1,29 @@
+type Query {
+  search_articles(
+    after: String
+    before: String
+    first: Int
+    last: Int
+  ): ArticleConnection!
+}
+
+type ArticleConnection {
+ edges: [ArticleEdge!]!
+ pageInfo: PageInfo!
+}
+
+type ArticleEdge {
+  node: Article!
+  cursor: String!
+}
+
+type Article {
+  id: Int!
+}
+
+type PageInfo {
+  startCursor: String
+  endCursor: String
+  hasPreviousPage: Boolean!
+  hasNextPage: Boolean!
+}

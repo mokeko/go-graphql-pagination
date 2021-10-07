@@ -8,8 +8,8 @@ type Query {
 }
 
 type ArticleConnection {
- edges: [ArticleEdge!]!
- pageInfo: PageInfo!
+  edges: [ArticleEdge!]!
+  pageInfo: PageInfo!
 }
 
 type ArticleEdge {
